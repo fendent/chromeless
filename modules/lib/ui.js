@@ -215,28 +215,6 @@ function getNotificationBox() {
 }
 
 exports.showNotification = function showNotification(title, text, imageURI, textClickable, onClick, onFinish, data) {
-    // try {
-    //     notifications.notify({
-    //         title: title,
-    //         iconURL: imageURI,
-    //         text: text,
-    //         onClick: onClick
-    //     });
-    // }
-    // catch (e) {
-    //     return;
-    //     let nb = getNotificationBox(),
-    //         notification = nb.appendNotification(
-    //             text,
-    //             'jetpack-notification-box',
-    //             imageURI || 'chrome://browser/skin/Info.png',
-    //             nb.PRIORITY_INFO_MEDIUM,
-    //             []
-    //         );
-    //     timer.setTimeout(function() {
-    //         notification.close();
-    //     }, 10 * 1000);
-    // }
     var alertObserver = {
         observe: function(subject, topic, data) {
             if ((topic === "alertclickcallback") && !!textClickable)
